@@ -8,5 +8,8 @@
   },
   "author": "Yoshihiro Tanaka <contact@cordea.jp>",
   "license": "Apache-2.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
