@@ -21,6 +21,7 @@ jobs:
           ref: pages
           clean: false
       - run: |
+          git checkout main -- index.html
           git add *.xml
       - run: |
           git config user.name "Yoshihiro Tanaka"

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RSS feed to get Flutter releases</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Jost"
+    />
+    <style>
+      body {
+        font-family: "Jost", serif;
+        padding: 32px;
+      }
+
+      p {
+        padding-top: 32px;
+        font-size: 18px;
+      }
+
+      .container {
+        display: flex;
+        gap: 24px;
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>RSS feed to get Flutter releases</h1>
+    <p>
+      This is unofficial RSS feed to get Flutter releases. The data source is
+      <a href="https://docs.flutter.dev/release/archive">Flutter SDK archive</a
+      >, and observe it daily by GitHub Actions. If you notice anything, please
+      let me know through
+      <a href="https://github.com/CORDEA/flutter-release-rss">repository</a>.
+    </p>
+    <div class="container">
+      <a
+        href="https://cordea.jp/flutter-release-rss/releases_windows.xml"
+        class="link"
+      >
+        <span class="material-symbols-outlined">rss_feed</span>
+        <span>Windows</span>
+      </a>
+      <a
+        href="https://cordea.jp/flutter-release-rss/releases_macos.xml"
+        class="link"
+      >
+        <span class="material-symbols-outlined">rss_feed</span>
+        <span>macOS</span>
+      </a>
+      <a
+        href="https://cordea.jp/flutter-release-rss/releases_linux.xml"
+        class="link"
+      >
+        <span class="material-symbols-outlined">rss_feed</span>
+        <span>Linux</span>
+      </a>
+    </div>
+  </body>
+</html>
