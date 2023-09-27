@@ -16,13 +16,15 @@ jobs:
       - run: |
           npm ci
           npm run build
+          mkdir -p dist
+          mv index.html dist/
       - uses: actions/checkout@v3
         with:
           ref: pages
           clean: false
       - run: |
-          git checkout main -- index.html
-          git add *.xml
+          mv dist/* ./
+          git add *.xml *.html
       - run: |
           git config user.name "Yoshihiro Tanaka"
           git config user.email "contact@cordea.jp"
