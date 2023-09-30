@@ -47,6 +47,9 @@ function buildRss(os, items) {
             {
               description: "",
             },
+            {
+              lastBuildDate: new Date().toISOString(),
+            },
             ...items,
           ],
         },
