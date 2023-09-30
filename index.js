@@ -1,5 +1,5 @@
 const xml = require("xml");
-const { writeFile } = require("fs/promises");
+const { mkdir, writeFile } = require("fs/promises");
 
 const baseUrl = "https://storage.googleapis.com/flutter_infra_release/releases";
 
@@ -60,9 +60,16 @@ function buildRss(os, items) {
 }
 
 (async function () {
+  try {
+    await mkdir("dist");
+  } catch (e) {
+    if (e.code !== "EEXIST") {
+      throw e;
+    }
+  }
   for (const e of query) {
     const items = await fetchRelease(e);
     const result = buildRss(e, items);
-    await writeFile(`releases_${e}.xml`, result);
+    await writeFile(`dist/releases_${e}.xml`, result);
   }
 })();
